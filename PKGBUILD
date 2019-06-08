@@ -8,8 +8,8 @@ _pkgname=("${_pkgbase}"{,'-wallpapers'}
           'konversation-theme-matcha')
 pkgname=("${_pkgname[@]/%/}")
 pkgbase=${_pkgbase}
-_commit=675f3743c9eadc18929ff8a9f7803b0ee7e217f1
-pkgver=20190522
+_commit=8a880b8f24a5cdc3e56bf5998b319463fddaad8a
+pkgver=20190608
 pkgrel=1
 arch=('any')
 url="https://gitlab.com/cscs/${_pkgbase}"
@@ -19,6 +19,10 @@ options=('!strip')
 source=("${pkgbase}::git+${url}.git#commit=$_commit")
 sha256sums=('SKIP')
 
+pkgver() {
+    date +%Y%m%d
+}
+	
 prepare() {
 	cd "${pkgbase}"
 	rm -r konversation/themes/papirus{,-dark}/src
