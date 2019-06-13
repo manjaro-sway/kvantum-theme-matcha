@@ -8,8 +8,8 @@ _pkgname=("${_pkgbase}"{,'-wallpapers'}
           'konversation-theme-matcha')
 pkgname=("${_pkgname[@]/%/}")
 pkgbase=${_pkgbase}
-_commit=8a880b8f24a5cdc3e56bf5998b319463fddaad8a
-pkgver=20190608
+_commit=e105df4643ff71ff5d1b2f2c1147300c13fd2ea4
+pkgver=20190613
 pkgrel=1
 arch=('any')
 url="https://gitlab.com/cscs/${_pkgbase}"
